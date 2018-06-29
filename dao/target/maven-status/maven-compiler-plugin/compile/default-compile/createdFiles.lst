@@ -1,0 +1,11 @@
+im\estore\mapper\ImItemMapper.class
+im\estore\mapper\ImContentMapper.class
+im\estore\mapper\ImOrderItemMapper.class
+im\estore\mapper\ImItemParamMapper.class
+im\estore\mapper\ImUserMapper.class
+im\estore\mapper\ImItemDescMapper.class
+im\estore\mapper\ImItemParamItemMapper.class
+im\estore\mapper\ImOrderShippingMapper.class
+im\estore\mapper\ImContentCategoryMapper.class
+im\estore\mapper\ImItemCatMapper.class
+im\estore\mapper\ImOrderMapper.class

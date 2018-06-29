@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>IMEstore</artifactId>
+        <groupId>im.ivanl001</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <artifactId>dao</artifactId>
+    <packaging>jar</packaging>
+
+
+    <dependencies>
+
+        <!-- 0,先引入其他模块 -->
+        <dependency>
+            <groupId>im.ivanl001</groupId>
+            <artifactId>model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>im.ivanl001</groupId>
+            <artifactId>utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>im.ivanl001</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
+
+
+        <!--1，mybatis是使用mybatis的基本架包，mybatis-spring是mybatis和spring整合需要用的一个架包-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+
+
+        <!-- 2,数据库相关 -->
+        <!-- MySql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- 连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+
+
+        <!-- 3,其他工具类，需要的话放在下面这里 -->
+
+
+
+
+
+    </dependencies>
+
+
+
+
+</project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+
+
+
+	<!-- 0, 扫描注解 -->
+	<context:component-scan base-package="im.estore" />
+
+
+	<!-- 1,引入属性配置文件 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:/env/prod/db.properties</value>
+			</list>
+		</property>
+	</bean>
+
+
+   	<!-- 2, 引入SPRING配置文件 -->
+	<!-- 2.1, 这里是dao层的配置文件，主要是把总配里面读到的数据库配置信息放进去，并配置mapper地址等 -->
+	<import resource="classpath:/spring/spring-dao-config.xml"/>
+	<!-- 2.2，主要是文件注解扫描的配置和service层的事务添加等 -->
+	<import resource="classpath:/spring/spring-service-config.xml"/>
+
+
+</beans>

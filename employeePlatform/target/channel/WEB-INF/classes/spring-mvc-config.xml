@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                        http://www.springframework.org/schema/mvc
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+
+	<!-- 1,首先进行控制器扫描，这个主要是对于常规的注解进行解析然后可以正常使用 -->
+	<context:component-scan base-package="im.estore.employeePlatform"/>
+
+	<!-- 2,注解驱动，这个主要是对于url的映射起作用，不然url映射可能不太好使，所以这个只需要在控制器层即可 -->
+	<mvc:annotation-driven/>
+
+	<!-- 3,如果用jsp的话需要配置视图解析器 -->
+
+
+	<!-- 4,不拦截静态资源文件 -->
+	<mvc:default-servlet-handler />
+
+
+</beans>

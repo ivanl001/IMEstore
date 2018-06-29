@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>IMEstore</artifactId>
+        <groupId>im.ivanl001</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>employeePlatform</artifactId>
+    <packaging>war</packaging>
+
+    <!--<profiles>
+
+        <profile>
+            <id>dev</id>
+            <properties>
+                <package.env>dev</package.env>
+                <log.url>D:\logs\logs\${project.name}</log.url>
+                <log.output.level>DEBUG</log.output.level>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+
+
+        <profile>
+            <id>test</id>
+            <properties>
+                <package.env>test</package.env>
+                <log.url>/home/test/logs/${project.name}</log.url>
+                <log.output.level>DEBUG</log.output.level>
+            </properties>
+        </profile>
+
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <package.env>prod</package.env>
+                <log.url>/home/prod/logs/${project.name}</log.url>
+                <log.output.level>INFO</log.output.level>
+            </properties>
+        </profile>
+    </profiles>-->
+
+
+
+
+
+
+    <dependencies>
+        <!-- 0,先引入其他模块 -->
+        <dependency>
+            <groupId>im.ivanl001</groupId>
+            <artifactId>service</artifactId>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <finalName>channel</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.3</version>
+                    <configuration>
+                        <skipTests>true</skipTests>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+    </build>
+
+
+
+
+
+</project>
